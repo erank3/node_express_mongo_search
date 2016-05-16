@@ -1,0 +1,40 @@
+<body style="padding-top: 100px">
+
+<% if (!user) { %>
+<p>Welcome! Please <a href="/login">log in</a>.</p>
+
+<p>Create account <a href="/signup">sign up</a>.</p>
+
+<% } else { %>
+
+<h2>Hello, <%= user.username %></h2>
+<p>View your <a href="/profile">profile</a></p>
+
+<h3>Looking For:</h3>
+
+<form action="/candidates">
+    <div>
+        <h4>Min Age</h4>
+        <input type="number" name="minAge" min="18" max="80">
+    </div>
+    <div>
+        <h4>Max Age</h4>
+        <input type="number" name="maxAge" min="18" max="80">
+    </div>
+    <div>
+        <h4>Hair Color</h4>
+        <input type="text" name="hairColor">
+    </div>
+    <div>
+        <h4>Religion</h4>
+        <input type="text" name="religion">
+    </div>
+    <div>
+        <input type="submit" value="Search"/>
+    </div>
+</form>
+
+
+<% } %>
+
+</body>

@@ -1,0 +1,27 @@
+<p>
+    ID: <%= user._id %><br/>
+    Username: <%= user.username %><br/>
+    Name: <%= user.name %><br/>
+    <% if (user.emails) { %>
+    Email: <%= user.emails[0].value %><br/>
+    <% } %>
+</p>
+<div>
+    <h3>About Me:</h3>
+
+    <div>
+        Age:
+        <%=user.preferences.age %>
+    </div>
+    <div>
+        Religion:
+        <%=user.preferences.religion %>
+    </div>
+    <div>
+        Hair Color:
+        <%=user.preferences.hairColor %>
+    </div>
+
+</div>
+
+<a href="/logout">Log out</a>
